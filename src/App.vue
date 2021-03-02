@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-container>
+      <v-app-bar
+        app
+        color="primary"
+        class="d-flex flex-row-reverse"
+      >
+        <v-btn
+          color="secondary"
+        >
+          <v-avatar
+            color="accent"
+            size="26"
+            
+          ></v-avatar>
+
+          <span class="pl-2">User logged</span>
+        </v-btn>
+      </v-app-bar>
+    
+
+      <v-main>
+        <StudentsList />
+      </v-main>
+    </v-container>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import StudentsList from "./components/StudentsList"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    StudentsList
+  },
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
