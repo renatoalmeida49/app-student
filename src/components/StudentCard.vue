@@ -11,10 +11,10 @@
             ></v-list-item-avatar>
 
             <v-list-item-content>
-                <v-list-item-title class="headline mb-1">
+                <v-list-item-title class="headline mb-1 font-weight-bold">
                     {{aluno.nome}}
                 </v-list-item-title>
-                <v-list-item-subtitle>
+                <v-list-item-subtitle class="font-weight-bold">
                     Última avaliação: 12/10/2019
                 </v-list-item-subtitle>
             </v-list-item-content>
@@ -30,13 +30,15 @@
 
                 <v-list-item-subtitle>
                     <v-btn
-                        class="mx-2"
+                        class="mx-2 mb-2"
                         fab
                         small
                         outlined
                         rounded
                         text
                         color="accent"
+                        elevation="2"
+                        :disabled = "aluno.ativo ? false : true"
                     >
                         <v-icon>
                             mdi-pencil
@@ -51,6 +53,7 @@
                         rounded
                         text
                         color="accent"
+                        :disabled = "aluno.ativo ? false : true"
                     >
                         <v-icon>
                             mdi-dots-horizontal

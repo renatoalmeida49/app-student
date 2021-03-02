@@ -21,7 +21,7 @@
             <v-col cols="3" class="d-flex flex-row">
                 <v-subheader class="font-weight-bold">Filtros:</v-subheader>
                 <v-select
-                    class="pr-5"
+                    class="pr-5 font-weight-bold"
                     :items="['Todos', 'Quase todos', 'Nenhum']"
                     label="Todos"
                     solo
@@ -110,6 +110,7 @@ export default {
 
 <style scoped>
 .gray {
-    background-color: #999 !important;
+    background-color: #CCC !important;
 }
+
 </style>
