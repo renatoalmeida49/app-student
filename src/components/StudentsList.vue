@@ -97,6 +97,11 @@ export default {
             }
         },
     },
+    watch: {
+        alunos() {
+            window.localStorage.alunos = JSON.stringify(this.alunos)
+        }
+    },
     created() {
         this.checarLocalStorage()
     }
